@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            margin: 0 auto;
+        }
+        ul {
+            list-style-type:none
+        }
+        input {
+            margin: 10px;
+        }
+        li input {margin-left: 30px}
+    </style>
+</head>
+<body>
+    <script>
+        // const btn_send = document.getElementById("#sendValues");
+        // btn_send.addEventListener("click", () => {
+        //     rezult_value_1.value = form_value_1.value;
+        //     rezult_value_2.value = form_value_2.value;
+        });
+    </script>
+    <div>
+        <form method="post" action="#" >
+            <h1>Заявка на поступление в КУЗГТУ.</h1>
+            <fieldset>
+                <legend>Основные данные</legend>
+                <ul>
+                    <li>
+                        <label>ФИО</label>
+                        <input id="form_value_1" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+                    </li>
+                    <li>
+                        <label>Дата рождения</label>
+                        <input id="form_value_2" type="date" >
+                    </li>
+                    <li>
+                        <span>Пол</span>
+                        <input id="form_value_3" type="radio" name="pol" value="Мужской">Мужской
+                        <input id="form_value_4" type="radio" name="pol" value="Женский">Женский
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Специальность</legend>
+                <ul>
+                    <li>
+                        <input id="form_value_5" type="radio" name="spec" value="ИТ">ИТ
+                        <input id="form_value_6" type="radio" name="spec" value="ИБ">ИБ
+                        <input id="form_value_7" type="radio" name="spec" value="БИ">БИ
+                    </li>
+                    <li>
+                        <label>Сумма балов</label>
+                        <input id="form_value_8" type="text" name="summ" placeholder="Введите сумму балов">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="agree" required> Согласие на обработку персональных данных
+                    </li>
+                </ul>
+            </fieldset>
+<!--            <button type="submit" formaction = "rezult.html">Отправить</button>-->
+            <input id="sendValues" type = "submit" value = "Отправить" formaction = "rezult.html" style="float: right; margin: 10px 15px;">
+
+        </form>
+    </div>
+</body>
+</html>
