@@ -22,33 +22,46 @@
 
     </style>
 
+    <script>
+        document.getElementById("form2_fio").innerHTML=localStorage.getItem("txtValue");
+        // document.getElementById("form2_fio").innerHTML="txtValue";
+        document.getElementById("form2_date").innerHTML=localStorage.getItem("txtValue1");
+        // document.getElementById("form2_pol").innerHTML=localStorage.getItem("txtValue2");
+        // document.getElementById("form2_spec").innerHTML=localStorage.getItem("txtValue3");
+    </script>
+
 </head>
 <body>
     <div>
         <h2>Результат заявки</h2>
         <h3>Данные заявки на поступление в КУЗГТУ добавлены.</h3>
+<!--        <div>-->
+<!--            ФИО <span id="form2_fio"> fio</span>-->
+<!--        </div>-->
+
         <form>
             <fieldset>
                 <ul>
                     <li>
                         <label>ФИО</label>
-                        <label id="rezult_value_1" type="text" >- Здесь будет ФИО</label>
+<!--                        <span id="form2_fio"> fio</span>-->
+                        <label id="form2_fio" type="text" >- Здесь будет ФИО</label>
                     </li>
                     <li>
                         <label>Дата рождения</label>
-                        <label id="rezult_value_2" type="text" >- Здесь будет дата рождения</label>
+                        <label id="form2_date" type="text" >- Здесь будет дата рождения</label>
                     </li>
                     <li>
                         <label>Пол</label>
-                        <label id="rezult_value_3" type="text" >- Здесь будет пол студента</label>
+                        <label id="form2_pol" type="text" >- Здесь будет пол студента</label>
                     </li>
                     <li>
                         <label>Специальность</label>
-                        <label id="rezult_value_4" type="text" >- Здесь будет специальность студента</label>
+                        <label id="form2_spec" type="text" >- Здесь будет специальность студента</label>
                     </li>
                     <li>
                         <label>Сумма баллов</label>
-                        <label id="rezult_value_5" type="text" >- Здесь будет сумма балов студента</label>
+                        <label id="form2_sum" type="text" >- Здесь будет сумма балов студента</label>
                     </li>
                 </ul>
             </fieldset>

@@ -26,26 +26,47 @@
         // btn_send.addEventListener("click", () => {
         //     rezult_value_1.value = form_value_1.value;
         //     rezult_value_2.value = form_value_2.value;
-        });
+        // });
+            function getData()
+            {
+                //gettting the values
+                const fio = document.getElementById("form1_fio").value;
+                var date = document.getElementById("form1_date").value;
+                // var pol = document.getElementById("form2_pol || form3_pol").value;
+                // var spec = document.getElementById("form5_spec || form6_spec || form7_spec").value;
+                //saving the values in local storage
+                localStorage.setItem("txtValue", fio);
+                localStorage.setItem("txtValue1", date);
+                // localStorage.setItem("txtValue2", pol);
+                // localStorage.setItem("txtValue3", spec);
+            }
+        // function CheckAge(age)
+        // {
+        //     if(age<18)
+        //         return "18";
+        //     else
+        //         return  age;
+        // }
     </script>
+
     <div>
-        <form method="post" action="#" >
+        <form action="Rezult.html" method="post">
             <h1>Заявка на поступление в КУЗГТУ.</h1>
             <fieldset>
                 <legend>Основные данные</legend>
                 <ul>
                     <li>
                         <label>ФИО</label>
-                        <input id="form_value_1" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+                        <input id="form1_fio" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
                     </li>
                     <li>
-                        <label>Дата рождения</label>
-                        <input id="form_value_2" type="date" >
+                        <label>Дата рождения </label>
+                        <input id="form1_date" type="date" >
                     </li>
                     <li>
                         <span>Пол</span>
-                        <input id="form_value_3" type="radio" name="pol" value="Мужской">Мужской
-                        <input id="form_value_4" type="radio" name="pol" value="Женский">Женский
+                        <input id="form2_pol" type="radio" name="pol" value="Мужской">Мужской
+                        <input id="form3_pol" type="radio" name="pol" value="Женский">Женский
                     </li>
                 </ul>
             </fieldset>
@@ -53,13 +74,13 @@
                 <legend>Специальность</legend>
                 <ul>
                     <li>
-                        <input id="form_value_5" type="radio" name="spec" value="ИТ">ИТ
-                        <input id="form_value_6" type="radio" name="spec" value="ИБ">ИБ
-                        <input id="form_value_7" type="radio" name="spec" value="БИ">БИ
+                        <input id="form5_spec" type="radio" name="spec" value="ИТ">ИТ
+                        <input id="form6_spec" type="radio" name="spec" value="ИБ">ИБ
+                        <input id="form7_spec" type="radio" name="spec" value="БИ">БИ
                     </li>
                     <li>
                         <label>Сумма балов</label>
-                        <input id="form_value_8" type="text" name="summ" placeholder="Введите сумму балов">
+                        <input id="form8_sum" type="text" name="sum" placeholder="Введите сумму балов">
                     </li>
                     <li>
                         <input type="checkbox" name="agree" required> Согласие на обработку персональных данных
@@ -67,7 +88,8 @@
                 </ul>
             </fieldset>
 <!--            <button type="submit" formaction = "rezult.html">Отправить</button>-->
-            <input id="sendValues" type = "submit" value = "Отправить" formaction = "rezult.html" style="float: right; margin: 10px 15px;">
+<!--            <input id="sendValues" type = "submit" value = "Отправить" formaction = "Rezult.html" style="float: right; margin: 10px 15px;">-->
+            <input id="sendValues" type = "submit" value = "Отправить" onclick="getData()" style="float: right; margin: 10px 15px;">
 
         </form>
     </div>
