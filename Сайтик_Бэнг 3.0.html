@@ -4,27 +4,51 @@
 <title> Биография  </title>
 <meta charset="utf-8">
         <title>Панель навигации в HTML5</title>
-        <style>
-            ul.nav{
-                margin-left: 0px;
-                padding-left: 0px;
-                list-style: none;
-            }
-            ul.nav a {
-                display: block;
-                width: 7em;
-                padding:10px;
-                background-color: #f4f4f4;
-                border-top: 1px dashed #333;
-                border-right: 1px dashed #333;
-                border-left: 5px solid #333;
-                text-decoration: none;
-                color: #333;
-            }
-            ul.nav li:last-child a {
-                border-bottom: 1px dashed #333;
-            }
-        </style>
+    <style>
+        ul.nav{
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+        }
+        ul.nav a {
+            display: block;
+            width: 7em;
+            padding:10px;
+            background-color: #f4f4f4;
+            border-top: 1px dashed #333;
+            border-right: 1px dashed #333;
+            border-left: 5px solid #333;
+            text-decoration: none;
+            /*color: #333;*/
+        }
+        ul.nav a:visited {
+            color: #0000FF; /* Цвет посещенных ссылок */
+        }
+        ul.nav a:hover {
+            color: #f64702; /* Цвет наведёных ссылок */
+        }
+
+        ul.nav li:last-child a {
+            border-bottom: 1px dashed #333;
+        }
+        a {
+            text-decoration:none;
+            color: #0000FF; /* Цвет ссылок */
+        }
+        a:visited {
+            color: #0000FF; /* Цвет посещенных ссылок */
+        }
+        a:hover {
+            color: #f64702; /* Цвет наведёных ссылок */
+        }
+        .tel {
+            color: #77ee02;
+        }
+        .video{
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 
 
@@ -86,10 +110,14 @@
 </ul>
 </p>
 </aside>
+    <hr>
 <p align="center"><img src="#"></p>
-<video width="800" height="400" controls="controls" poster="wallpaper-1441273.jpg">
-   <source src="London tourism - England - United Kingdom Great Britain travel video_ Big Ben, B.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-</video>
+    <div class="video">
+        <video  width="800" height="400" controls="controls" poster="wallpaper-1441273.jpg">
+           <source src="London tourism - England - United Kingdom Great Britain travel video_ Big Ben, B.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+    </div>
+    <hr>
 </section>
 
 <br><br>
@@ -97,23 +125,7 @@
 <br>
 <a href="https://web.telegram.org/z/"><center>Телеграм</center></a>
 <br>
-<center><a href="tel:89069334947">Telephone</a></center>
-
-
-
+<center><a class="tel" href="tel:89069334947">Telephone</a></center>
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
- 
 </html>

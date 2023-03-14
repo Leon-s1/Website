@@ -19,11 +19,37 @@
                 border-right: 1px dashed #333;
                 border-left: 5px solid #333;
                 text-decoration: none;
-                color: #333;
+                /*color: #333;*/
             }
             ul.nav li:last-child a {
                 border-bottom: 1px dashed #333;
             }
+            .odd {
+                background: aqua;
+            }
+            .even {
+                background: coral;
+            }
+            ul.nav a:visited {
+                color: #0000FF; /* Цвет посещенных ссылок */
+            }
+            ul.nav a:hover {
+                color: #f64702; /* Цвет наведёных ссылок */
+            }
+            a {
+                text-decoration:none;
+                color: #0000FF; /* Цвет ссылок */
+            }
+            a:visited {
+                color: #0000FF; /* Цвет посещенных ссылок */
+            }
+            a:hover {
+                color: #f64702; /* Цвет наведёных ссылок */
+            }
+            .tel {
+                color: #77ee02;
+            }
+
         </style>
 </head>
 
@@ -77,23 +103,23 @@
 </b>
 </h1>
 <h2>
-<b>
+<b class="odd">
 А. С. Грибоедов, "Горе от ума"
 </b>
 <br><br>
-<<А судьи кто?>> 
+<b class="odd">А судьи кто?</b>
 <br><br>
-<b>
+<b class="even">
 Ф. М. Достоевский, "Преступление и наказание"
 </b>
 <br><br>
-<<Человек он умный, но чтоб умно поступать — одного ума мало.>>
+<b class="even">Человек он умный, но чтоб умно поступать — одного ума мало.></b>
 <br><br>
-<b>
+<b class="odd">
 И. С. Тургенев, "Муму"
 </b>
 <br><br>
-<<Ни одна мать так не ухаживает за своим ребенком, как ухаживал Герасим за своей питомицей.>>
+<b class="odd">Ни одна мать так не ухаживает за своим ребенком, как ухаживал Герасим за своей питомицей.></b>
 </h2>
 <br><br><br>
 <table border="7" width="600">
@@ -170,7 +196,7 @@
 <br>
 <a href="https://web.telegram.org/z/"><center>Телеграм</center></a>
 <br>
-<center><a href="tel:89069334947">Telephone</a></center>
+<center><a class="tel" href="tel:89069334947">Telephone</a></center>
 </footer>
 
 

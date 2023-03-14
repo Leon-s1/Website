@@ -19,11 +19,31 @@
                 border-right: 1px dashed #333;
                 border-left: 5px solid #333;
                 text-decoration: none;
-                color: #333;
+                /*color: #333;*/
             }
             ul.nav li:last-child a {
                 border-bottom: 1px dashed #333;
             }
+            ul.nav a:visited {
+                color: #0000FF; /* Цвет посещенных ссылок */
+            }
+            ul.nav a:hover {
+                color: #f64702; /* Цвет наведёных ссылок */
+            }
+            a {
+                text-decoration:none;
+                color: #0000FF; /* Цвет ссылок */
+            }
+            a:visited {
+                color: #0000FF; /* Цвет посещенных ссылок */
+            }
+            a:hover {
+                color: #f64702; /* Цвет наведёных ссылок */
+            }
+            .tel {
+                color: #77ee02;
+            }
+
         </style>
 </head>
 
@@ -95,23 +115,9 @@
 <br>
 <a href="https://web.telegram.org/z/"><center>Телеграм</center></a>
 <br>
-<center><a href="tel:89069334947">Telephone</a></center>
+<center><a class="tel" href="tel:89069334947">Telephone</a></center>
 </footer>
-
 
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
- 
 </html>
