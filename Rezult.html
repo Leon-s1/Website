@@ -23,28 +23,62 @@
     </style>
 
     <script>
-        document.getElementById("form2_fio").innerHTML=localStorage.getItem("txtValue");
+        // function user () {
+        // let userData = localStorage.getItem("txtValue"); //searches for the key in localStorage
+        // let paragraph = document.createElement("p");
+        // let info = document.createTextNode(userData);
+        // paragraph.appendChild(info);
+        //     let element = document.getElementById("userData");
+        //     element.appendChild(paragraph);
+        //     retrieveKey.value = "";
+        // }
+
+        // document.getElementById("form2_fio").innerHTML = localStorage.getItem("txtValue");
+        function load () {
+        // let fio = document.createElement('div')
+        // fio.innerHTML = localStorage.getItem("txtValue");
+        //********************************************
+        document.getElementById("form2_fio").innerHTML = localStorage.getItem("txtValue");
         // document.getElementById("form2_fio").innerHTML="txtValue";
         document.getElementById("form2_date").innerHTML=localStorage.getItem("txtValue1");
-        // document.getElementById("form2_pol").innerHTML=localStorage.getItem("txtValue2");
+        document.getElementById("form2_pol").innerHTML=localStorage.getItem("txtValue2");
+        document.getElementById("form2_spec").innerHTML=localStorage.getItem("txtValue3");
+        document.getElementById("form2_sum").innerHTML=localStorage.getItem("txtValue4");
         // document.getElementById("form2_spec").innerHTML=localStorage.getItem("txtValue3");
+
+        }
+
+        window.onload = function () {
+            // document.getElementById("userForm").onsubmit = store;
+            // document.getElementById("clearButton").onclick = deleteAllUserData;
+            // document.getElementById("removeButton").onclick = removeUserData;
+            document.getElementById("retrieveButton").onclick = user;
+            document.getElementById("userData").onload = user;
+            document.getElementById("form2_fio").onsubmit = load;
+
+        };
+        console.log(localStorage.getItem("txtValue"));
     </script>
 
 </head>
-<body>
+<body onload="load()">
     <div>
         <h2>Результат заявки</h2>
         <h3>Данные заявки на поступление в КУЗГТУ добавлены.</h3>
 <!--        <div>-->
 <!--            ФИО <span id="form2_fio"> fio</span>-->
 <!--        </div>-->
+<!--        <button id="retrieveButton">Retrieve user</button>-->
+<!--        <br />-->
+<!--        <div id="userData"></div>-->
+<!--        <br />-->
 
         <form>
             <fieldset>
                 <ul>
                     <li>
                         <label>ФИО</label>
-<!--                        <span id="form2_fio"> fio</span>-->
+<!--                        Студент <div id="form2_fio"></div>-->
                         <label id="form2_fio" type="text" >- Здесь будет ФИО</label>
                     </li>
                     <li>

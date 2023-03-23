@@ -27,18 +27,69 @@
         //     rezult_value_1.value = form_value_1.value;
         //     rezult_value_2.value = form_value_2.value;
         // });
-            function getData()
-            {
+            function getData() {
+                const isTrue = true
                 //gettting the values
                 const fio = document.getElementById("form1_fio").value;
-                var date = document.getElementById("form1_date").value;
-                // var pol = document.getElementById("form2_pol || form3_pol").value;
+                localStorage.setItem("txtValue", fio);
+                const date = document.getElementById("form1_date").value;
+                localStorage.setItem("txtValue1", date);
+                const pol = document.getElementsByName("pol")
+                const pol_m = document.getElementById("form2_pol").value;
+                const pol_w = document.getElementById("form3_pol").value;
+                console.log(pol_m)
+                if (pol[0].checked) {
+                    localStorage.setItem("txtValue2", pol_m);
+                } else {
+                    localStorage.setItem("txtValue2", pol_w);
+                }
+                const spec = document.getElementsByName("spec");
+                const spec_it = document.getElementById("form5_spec").value;
+                const spec_ib = document.getElementById("form6_spec").value;
+                const spec_bi = document.getElementById("form7_spec").value;
+                if (spec[0].checked) {
+                    localStorage.setItem("txtValue3", spec_it);
+                }
+                if (spec[1].checked) {
+                    localStorage.setItem("txtValue3", spec_ib);
+                }
+                if (spec[2].checked) {
+                   localStorage.setItem("txtValue3", spec_bi);
+                }
+                const sum = document.getElementById("form8_sum").value;
+                localStorage.setItem("txtValue4", sum);
+                // if (spec[1].checked) {
+                //
+                // }
+                // if {
+                //     localStorage.setItem("txtValue2", pol_w);
+                // }
+
                 // var spec = document.getElementById("form5_spec || form6_spec || form7_spec").value;
                 //saving the values in local storage
-                localStorage.setItem("txtValue", fio);
-                localStorage.setItem("txtValue1", date);
-                // localStorage.setItem("txtValue2", pol);
+
+
+
                 // localStorage.setItem("txtValue3", spec);
+//**************************************
+//                 let userData = localStorage.getItem(fio); //searches for the key in localStorage
+//                 let paragraph = document.createElement("p");
+//                 let info = document.createTextNode(userData);
+//                 paragraph.appendChild(info);
+//
+//                 let element = document.getElementById("userData");
+//                 element.appendChild(paragraph);
+//                 retrieveKey.value = "";
+//*******************************************
+            }
+
+                window.onload = function () {
+                    // document.getElementById("userForm").onsubmit = store;
+                    // document.getElementById("clearButton").onclick = deleteAllUserData;
+                    // document.getElementById("removeButton").onclick = removeUserData;
+                    // document.getElementById("retrieveButton").onclick = user;
+                    document.getElementById("userData").onload = getData;
+
             }
         // function CheckAge(age)
         // {
@@ -50,7 +101,7 @@
     </script>
 
     <div>
-        <form action="Rezult.html" method="post">
+        <form action="Rezult.html">
             <h1>Заявка на поступление в КУЗГТУ.</h1>
             <fieldset>
                 <legend>Основные данные</legend>
