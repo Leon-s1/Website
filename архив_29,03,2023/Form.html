@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            margin: 0 auto;
+        }
+        ul {
+            list-style-type:none
+        }
+        input {
+            margin: 10px;
+        }
+        li input {margin-left: 30px}
+    </style>
+</head>
+<body>
+<script>
+            function getData() {
+                const fio = document.getElementById("form1_fio").value;
+                    localStorage.setItem("txtValue", fio);
+                const date = document.getElementById("form1_date").value;
+                    localStorage.setItem("txtValue1", date);
+                const pol = document.getElementsByName("pol")
+                const pol_m = document.getElementById("form2_pol").value;
+                const pol_w = document.getElementById("form3_pol").value;
+                    if (pol[0].checked) {
+                        localStorage.setItem("txtValue2", pol_m);
+                    } else {
+                        localStorage.setItem("txtValue2", pol_w);
+                    }
+                const spec = document.getElementsByName("spec");
+                const spec_it = document.getElementById("form5_spec").value;
+                const spec_ib = document.getElementById("form6_spec").value;
+                const spec_bi = document.getElementById("form7_spec").value;
+                    if (spec[0].checked) {
+                        localStorage.setItem("txtValue3", spec_it);
+                    }
+                    if (spec[1].checked) {
+                        localStorage.setItem("txtValue3", spec_ib);
+                    }
+                    if (spec[2].checked) {
+                       localStorage.setItem("txtValue3", spec_bi);
+                }
+                const sum = document.getElementById("form8_sum").value;
+                localStorage.setItem("txtValue4", sum);
+            }
+    </script>
+    <div>
+        <form action="Rezult.html">
+            <h1>Заявка на поступление в КУЗГТУ.</h1>
+            <fieldset>
+                <legend>Основные данные</legend>
+                <ul>
+                    <li>
+                        <label>ФИО</label>
+                        <input id="form1_fio" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+                    </li>
+                    <li>
+                        <label>Дата рождения </label>
+                        <input id="form1_date" type="date" >
+                    </li>
+                    <li>
+                        <span>Пол</span>
+                        <input id="form2_pol" type="radio" name="pol" value="Мужской">Мужской
+                        <input id="form3_pol" type="radio" name="pol" value="Женский">Женский
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Специальность</legend>
+                <ul>
+                    <li>
+                        <input id="form5_spec" type="radio" name="spec" value="ИТ">ИТ
+                        <input id="form6_spec" type="radio" name="spec" value="ИБ">ИБ
+                        <input id="form7_spec" type="radio" name="spec" value="БИ">БИ
+                    </li>
+                    <li>
+                        <label>Сумма балов</label>
+                        <input id="form8_sum" type="text" name="sum" placeholder="Введите сумму балов">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="agree" required> Согласие на обработку персональных данных
+                    </li>
+                </ul>
+            </fieldset>
+            <input id="sendValues" type = "submit" value = "Отправить" onclick="getData()" style="float: right; margin: 10px 15px;">
+        </form>
+    </div>
+</body>
+</html>

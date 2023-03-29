@@ -7,6 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        ul.nav{
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+        }
+        ul.nav a {
+            display: block;
+            width: 7em;
+            padding:10px;
+            background-color: #f4f4f4;
+            border-top: 1px dashed #333;
+            border-right: 1px dashed #333;
+            border-left: 5px solid #333;
+            text-decoration: none;
+            /*color: #333;*/
+        }
+        ul.nav li:last-child a {
+            border-bottom: 1px dashed #333;
+        }
         div {
             width: 500px;
             margin: 0 auto;
@@ -18,6 +37,23 @@
             margin: 10px;
         }
         li input {margin-left: 30px}
+        ul.nav a:visited {
+            color: #0000FF; /* Цвет посещенных ссылок */
+        }
+        ul.nav a:hover {
+            color: #f64702; /* Цвет наведёных ссылок */
+        }
+        a {
+            text-decoration:none;
+            color: #0000FF; /* Цвет ссылок */
+        }
+        a:visited {
+            color: #0000FF; /* Цвет посещенных ссылок */
+        }
+        a:hover {
+            color: #f64702; /* Цвет наведёных ссылок */
+        }
+
     </style>
 </head>
 <body>
@@ -52,7 +88,14 @@
                 localStorage.setItem("txtValue4", sum);
             }
     </script>
+        <ul class="nav">
+            <li><a href="./Сайтик_бэнг1.0.html">Обо мне</a></li>
+            <li><a href="./Сайтик_бэнг2.0.html">Учеба</a></li>
+            <li><a href="./Сайтик_бэнг3.0.html">Отдых</a></li>
+            <li><a href="./Form.html">Заявка на поступление в учебное заведение</a></li>
+        </ul>
     <div>
+
         <form action="Rezult.html">
             <h1>Заявка на поступление в КУЗГТУ.</h1>
             <fieldset>
