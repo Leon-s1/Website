@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
@@ -13,7 +13,7 @@
             list-style: none;
         }
         ul.nav a {
-            display: block;
+            display: flex;
             width: 7em;
             padding:10px;
             background-color: #f4f4f4;
@@ -21,7 +21,6 @@
             border-right: 1px dashed #333;
             border-left: 5px solid #333;
             text-decoration: none;
-            /*color: #333;*/
         }
         ul.nav li:last-child a {
             border-bottom: 1px dashed #333;
@@ -52,6 +51,47 @@
         }
         a:hover {
             color: #f64702; /* Цвет наведёных ссылок */
+        }
+        @media only screen and (max-width: 500px) {
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /*width: 100%;*/
+
+            }
+            li input {
+                margin-left: 0;
+                width: 200px;
+            }
+            /*li span {*/
+            /*    display: flex;*/
+            /*}*/
+
+            #form2_pol {
+                margin-left: 0;
+                width: 30px;
+                display: flex;
+            }
+            #form3_pol {
+                margin-left: 0;
+                width: 30px;
+                display: flex;
+            }
+            #form5_spec {
+                margin-left: 0;
+                width: 30px;
+                display: flex;
+            }#form6_spec {
+                margin-left: 0;
+                width: 30px;
+                display: flex;
+            }#form7_spec {
+                margin-left: 0;
+                width: 30px;
+                display: flex;
+            }
+
         }
 
     </style>
@@ -88,53 +128,57 @@
                 localStorage.setItem("txtValue4", sum);
             }
     </script>
+    <div class="wrapper">
         <ul class="nav">
             <li><a href="./Сайтик_бэнг1.0.html">Обо мне</a></li>
             <li><a href="./Сайтик_бэнг2.0.html">Учеба</a></li>
             <li><a href="./Сайтик_бэнг3.0.html">Отдых</a></li>
             <li><a href="./Form.html">Заявка на поступление в учебное заведение</a></li>
         </ul>
-    <div>
-
-        <form action="Rezult.html">
-            <h1>Заявка на поступление в КУЗГТУ.</h1>
-            <fieldset>
-                <legend>Основные данные</legend>
-                <ul>
-                    <li>
-                        <label>ФИО</label>
-                        <input id="form1_fio" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
-                    </li>
-                    <li>
-                        <label>Дата рождения </label>
-                        <input id="form1_date" type="date" >
-                    </li>
-                    <li>
-                        <span>Пол</span>
-                        <input id="form2_pol" type="radio" name="pol" value="Мужской">Мужской
-                        <input id="form3_pol" type="radio" name="pol" value="Женский">Женский
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>Специальность</legend>
-                <ul>
-                    <li>
-                        <input id="form5_spec" type="radio" name="spec" value="ИТ">ИТ
-                        <input id="form6_spec" type="radio" name="spec" value="ИБ">ИБ
-                        <input id="form7_spec" type="radio" name="spec" value="БИ">БИ
-                    </li>
-                    <li>
-                        <label>Сумма балов</label>
-                        <input id="form8_sum" type="text" name="sum" placeholder="Введите сумму балов">
-                    </li>
-                    <li>
-                        <input type="checkbox" name="agree" required> Согласие на обработку персональных данных
-                    </li>
-                </ul>
-            </fieldset>
-            <input id="sendValues" type = "submit" value = "Отправить" onclick="getData()" style="float: right; margin: 10px 15px;">
-        </form>
+    </div>
+        <div>
+            <div action="Rezult.html">
+                <h1>Заявка на поступление в КУЗГТУ.</h1>
+                <fieldset>
+                    <legend>Основные данные</legend>
+                    <ul>
+                        <li class="wrapper">
+                            <label>ФИО</label>
+                            <input id="form1_fio" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+                        </li>
+                        <li class="wrapper">
+                            <label>Дата рождения </label>
+                            <input id="form1_date" type="date" >
+                        </li>
+                        <li>
+                            <span>Пол</span>
+                            <input id="form2_pol" type="radio" name="pol" value="Мужской">Мужской
+                            <input id="form3_pol" type="radio" name="pol" value="Женский">Женский
+                        </li>
+                    </ul>
+                </fieldset>
+        </div>
+<!--        <div class="wrapper">-->
+                <fieldset>
+                    <legend>Специальность</legend>
+                    <ul>
+                        <li class="wrapper">
+                            <input id="form5_spec" type="radio" name="spec" value="ИТ">ИТ
+                            <input id="form6_spec" type="radio" name="spec" value="ИБ">ИБ
+                            <input id="form7_spec" type="radio" name="spec" value="БИ">БИ
+                        </li>
+                        <li class="wrapper">
+                            <label>Сумма балов</label>
+                            <input id="form8_sum" type="text" name="sum" placeholder="Введите сумму балов">
+                        </li>
+                        <li class="wrapper">
+                            <input type="checkbox" name="agree" required> Согласие на обработку персональных данных
+                        </li>
+                    </ul>
+                </fieldset>
+                <input id="sendValues" type = "submit" value = "Отправить" onclick="getData()" style="float: right; margin: 10px 15px;">
+            </form>
+        </div>
     </div>
 </body>
 </html>
