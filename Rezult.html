@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        h3 {
+            text-align: center;
+        }
         ul.nav{
             margin-left: 0px;
             padding-left: 0px;
@@ -21,7 +23,6 @@
             border-right: 1px dashed #333;
             border-left: 5px solid #333;
             text-decoration: none;
-            /*color: #333;*/
         }
         ul.nav li:last-child a {
             border-bottom: 1px dashed #333;
@@ -52,14 +53,33 @@
         a:hover {
             color: #f64702; /* Цвет наведёных ссылок */
         }
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 500px) {
             .wrapper {
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
+                width: 400px;
+                margin: 0 auto;
+                align-items: center;
             }
-            /*.wrapper fieldset {*/
-            /*    width: 300px;*/
-            /*}*/
+            div {
+                margin: 0 auto;
+            }
+            h3 {
+                /*width: 400px;*/
+                display: flex;
+                align-items: center;
+                height: 70px;
+                /*text-align: center;*/
+                /*margin: 0 auto;*/
+            }
+            li label {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 0;
+                width: 100px;
+            }
         }
     </style>
 </head>
@@ -82,27 +102,27 @@
                 <li><a href="./Form.html">Заявка на поступление в учебное заведение</a></li>
             </ul>
             <div>
-            <h3 class="wrapper">Данные заявки на поступление в КУЗГТУ добавлены.</h3>
+            <h3>Данные заявки на поступление в КУЗГТУ добавлены.</h3>
             <form>
                 <fieldset>
                     <ul >
-                        <li class="form wrapper">
+                        <li class="wrapper">
                             <label>ФИО</label>
                             <label id="form2_fio" type="text" >- Здесь будет ФИО</label>
                         </li>
-                        <li class="form wrapper">
+                        <li class="wrapper">
                             <label>Дата рождения</label>
                             <label id="form2_date" type="text" >- Здесь будет дата рождения</label>
                         </li>
-                        <li>
+                        <li class="wrapper">
                             <label>Пол</label>
                             <label id="form2_pol" type="text" >- Здесь будет пол студента</label>
                         </li>
-                        <li>
+                        <li class="wrapper">
                             <label>Специальность</label>
                             <label id="form2_spec" type="text" >- Здесь будет специальность студента</label>
                         </li>
-                        <li>
+                        <li class="wrapper">
                             <label>Сумма баллов</label>
                             <label id="form2_sum" type="text" >- Здесь будет сумма балов студента</label>
                         </li>
